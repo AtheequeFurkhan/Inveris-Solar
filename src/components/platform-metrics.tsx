@@ -18,21 +18,20 @@ const PlatformMetrics = () => {
 
                     <AnimationContainer animation="fadeUp" delay={0.3}>
                         <h2 className="text-2xl md:text-4xl lg:text-5xl font-medium !leading-tight text-transparent bg-clip-text bg-gradient-to-b from-foreground to-neutral-400">
-                            Transforming real estate
-                            <br />
-                            management globally
+                        Revolutionizing Solar 
+<br />
+Panel Error Analysis 
                         </h2>
                     </AnimationContainer>
 
                     <AnimationContainer animation="fadeUp" delay={0.4}>
                         <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
-                            Join thousands who trust our platform to streamline operations and grow.
-                        </p>
+                        Join thousands who rely on our platform for seamless solar panel error analysis and improved efficiency.                        </p>
                     </AnimationContainer>
 
                     <AnimationContainer animation="fadeUp" delay={0.5}>
                         <Button className="mt-4">
-                            Start your journey
+                            Integrate Now
                         </Button>
                     </AnimationContainer>
                 </div>

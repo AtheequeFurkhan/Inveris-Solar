@@ -21,7 +21,14 @@ const HowItWorks = () => {
 
                 <AnimationContainer animation="fadeUp" delay={0.4}>
                     <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-lg mx-auto">
-                        Our three-step process simplifies real estate transactions and property management.
+Our three-step process streamlines solar panel error detection, analysis, and resolution.
+
+
+
+
+
+
+
                     </p>
                 </AnimationContainer>
             </div>
