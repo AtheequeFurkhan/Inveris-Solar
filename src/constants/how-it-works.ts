@@ -6,18 +6,18 @@ export interface HowItWorksItem {
 
 export const HOW_IT_WORKS: HowItWorksItem[] = [
     {
-        title: "List Your Property",
-        description: "Easily list your property with detailed information, high-quality photos, and competitive pricing in just minutes.",
+        title: "View Your Clients",
+        description: "Quickly add your solar panel system with detailed specifications, high-quality images, and accurate performance data in just minutes.",
         image: "/images/hiw-one.svg"
     },
     {
         title: "Smart Management",
-        description: "Manage listings, track inquiries, and handle transactions from one central dashboard.",
+        description: "Manage errors, track inquiries, and handle issues from one central dashboard.",
         image: "/images/hiw-two.svg"
     },
     {
-        title: "Close Deals Faster",
-        description: "Streamline negotiations and paperwork with our automated systems and expert support for quick, hassle-free closings.",
+        title: "Save Time and Money",
+        description: "Simplify error analysis and reporting with our automated systems and expert support for quick, hassle-free diagnostics.",
         image: "/images/hiw-three.svg"
     }
 ];

@@ -7,7 +7,7 @@ export interface PerkItem {
 export const PERKS: PerkItem[] = [
     {
         title: "Property Sync",
-        description: "Sync listings across platforms instantly.",
+        description: "Sync updates across platforms instantly.",
         icon: "/icons/perk-one.svg"
     },
     {
