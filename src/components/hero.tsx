@@ -43,7 +43,7 @@ const Hero = () => {
                         <div className="w-full">
                             <Link href="/">
                                 <Button size="md" className="w-full md:w-auto">
-                                    Start free trial
+                                    Book a Demo
                                 </Button>
                             </Link>
                         </div>
