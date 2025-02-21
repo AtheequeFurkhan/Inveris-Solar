@@ -29,7 +29,7 @@ const Pricing = () => {
 
                 <AnimationContainer animation="fadeUp" delay={0.4}>
                     <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
-                        Select a plan that best suits your real estate business needs
+                        Select a plan that best suits your company
                     </p>
                 </AnimationContainer>
             </div>
