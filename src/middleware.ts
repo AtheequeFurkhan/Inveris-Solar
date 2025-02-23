@@ -1,39 +1,22 @@
-import { authMiddleware } from "@clerk/nextjs";
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
-export default authMiddleware({
-  // Public routes that don't require authentication
-  publicRoutes: [
-    "/",
-    "/signin",
-    "/signup",
-    "/api/webhooks(.*)",
-    "/docs(.*)"
-  ],
-  
-  // Routes that can be ignored by authentication
-  ignoredRoutes: [
-    "/((?!api|trpc))(_next|.+..+)",
-    "/api/webhooks(.*)",
-    "/_next(.*)",
-    "/favicon.ico",
-    "/images(.*)"
-  ],
+export function middleware(request: NextRequest) {
+    const clerkApiKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+    const clerkSecretKey = process.env.NEXT_PUBLIC_CLERK_SECRET_KEY;
 
-  // Optional: Add afterAuth callback for custom authentication logic
-  afterAuth(auth, req) {
-    if (!auth.userId && !auth.isPublicRoute) {
-      return NextResponse.redirect(new URL('/signin', req.url));
+    if (!clerkApiKey) {
+        console.error('Clerk API Key is not defined');
+        return new NextResponse('Internal Server Error - API Key', { status: 500 });
     }
-    return NextResponse.next();
-  }
-});
 
-// Specify routes that will be matched
-export const config = {
-  matcher: [
-    "/((?!.*\\.[\\w]+$|_next).*)",
-    "/",
-    "/(api|trpc)(.*)"
-  ],
-};
+    if (!clerkSecretKey) {
+        console.error('Clerk Secret Key is not defined');
+        return new NextResponse('Internal Server Error - Secret Key', { status: 500 });
+    }
+
+    console.log('Clerk API Key:', clerkApiKey);
+    console.log('Clerk Secret Key:', clerkSecretKey);
+
+    return NextResponse.next();
+}
